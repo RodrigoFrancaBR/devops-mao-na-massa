@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
-  config.vm.define "vm_lab01"
+  config.vm.define "vagrant-lab01"
   config.vm.provider "virtualbox" do |vb|
-  	vb.name = "vm_lab01"
+  	vb.name = "vagrant-lab01"
   end
   config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
   config.vm.provision "shell", path: "provision.sh"
