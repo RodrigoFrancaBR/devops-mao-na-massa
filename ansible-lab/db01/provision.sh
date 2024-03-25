@@ -1,0 +1,5 @@
+#/bin/bash
+sudo yum -y install nano
+cat <<EOT >> /home/vagrant/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0JRaultdceuqiLgDqsbj2YCv2FClpkQE3BFKokifdnezNU+BHLhSx+nqUhn+JbVz/lcdwDziG7LRbjcMVew1f2rihmoAK0Mwhoneqe+X06Za1MI2Z3ofJy1iV1gQV5OZE53IaxiK6FcRWMImdoyTH0tP0QCyepqARt8UB7JP4BXFkmSvRpOEGUwflxFXPBvQ0+YLPusG/35daFMUcwVIUFGNFLCUrgpThG/7hnGEqB63rw9ugaxNm8HJF0U9Xt/WIV+4gO7gB/ekHhakHHM16qVv4O0+MSgvrK4h8WEXotLKXQLg88T6O9RDcteCQXyRr/NqUeIKbISROU6sxlFY7 vagrant@control-node
+EOT
