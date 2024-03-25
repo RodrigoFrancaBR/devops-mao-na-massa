@@ -1,5 +1,6 @@
 #/bin/bash
 # instalando o repo do yum epel-release
+sudo yum -y install nano
 sudo yum -y install epel-release
 echo "Installing Ansible"
 sudo yum -y install ansible
