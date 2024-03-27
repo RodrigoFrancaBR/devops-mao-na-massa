@@ -1,0 +1,11 @@
+- name: Upgrade de todos os pacotes do s.o
+# modulo do ansible
+  yum:
+  # todos os pacotes
+    name: '*'
+    state: latest
+- name: instalacao do git client
+  yum:
+  #nome do pacote
+  name: git
+  state: latest
