@@ -13,22 +13,6 @@
     - dbname: "db01"
     - dbusername: "root"
     - dbpassword: "devopsmaonamassa"
-  tasks:
-# eu não sei nos hosts (db01 e app01) o ip do control-node por exemplo  
-    - name: Configurar hosts lab ansible
-# for (int i = 0; i<=10; i++)    
-      lineinfile:
-        dest: /etc/hosts
-        state: present
-        line: "{{item}}"
-# para cada entrada de with_items é um item no lineinfile que será adicionado no path /etc/hosts      
-      with_items:
-        - 192.168.33.2 control-node
-        - 192.168.33.3 app01
-        - 192.168.33.4 db01
-# Atividades que não estão dentro desse conjunto de tasks, essas são tasks associadas a uma role
-# é possível aproveitar roles da comunidade
-# posso criar minhas próprias roles        
   roles:
     - configuracao-default-so
 # precisa instalar o galacy na vm $ansible-galaxy install geerlingguy.mysql

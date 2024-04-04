@@ -9,3 +9,12 @@
   #nome do pacote
   name: git
   state: latest
+- name: Configurar hosts lab ansible
+      lineinfile:
+        dest: /etc/hosts
+        state: present
+        line: "{{item}}"
+      with_items:
+        - 192.168.33.2 control-node
+        - 192.168.33.3 app01
+        - 192.168.33.4 db01
